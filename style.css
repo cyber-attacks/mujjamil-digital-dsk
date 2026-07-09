@@ -1,1 +1,166 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
+body{
+background:linear-gradient(135deg,#001b44,#0047ab,#0077ff);
+color:white;
+overflow-x:hidden;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+position:fixed;
+width:100%;
+top:0;
+left:0;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+.logo h2{
+font-size:30px;
+font-weight:700;
+}
+
+.menu{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#38bdf8;
+}
+
+.call-btn{
+background:#0ea5e9;
+padding:12px 24px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+}
+
+.call-btn:hover{
+background:#0284c7;
+transform:translateY(-3px);
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:120px 8%;
+gap:60px;
+}
+
+.hero-left{
+flex:1;
+}
+
+.hero-left h1{
+font-size:58px;
+line-height:1.1;
+margin-bottom:25px;
+}
+
+.hero-left p{
+font-size:19px;
+line-height:1.8;
+color:#dbeafe;
+margin-bottom:35px;
+}
+
+.buttons{
+display:flex;
+gap:20px;
+}
+
+.btn1,.btn2{
+padding:15px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+}
+
+.btn1{
+background:#0ea5e9;
+color:white;
+}
+
+.btn2{
+background:white;
+color:#0047ab;
+}
+
+.btn1:hover,
+.btn2:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.hero-right{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.hero-right img{
+width:100%;
+max-width:520px;
+border-radius:25px;
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+@media(max-width:900px){
+
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+.menu{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding-top:170px;
+}
+
+.hero-left h1{
+font-size:42px;
+}
+
+.buttons{
+justify-content:center;
+}
+
+}
